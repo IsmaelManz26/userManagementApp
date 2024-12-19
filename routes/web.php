@@ -16,4 +16,5 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::resource('users', UserController::class);
     Route::get('/verificado', [ProfileController::class, 'verificado'])->name('verificado');
+    Route::get('/user/details', [ProfileController::class, 'details'])->name('user.details');
 });

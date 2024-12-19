@@ -9,6 +9,13 @@ use App\Models\User;
 
 class ProfileController
 {
+
+    public function details()
+    {
+        $user = Auth::user();
+        return view('profile.details', compact('user'));
+    }
+
     public function edit()
     {
         return view('auth.profile');

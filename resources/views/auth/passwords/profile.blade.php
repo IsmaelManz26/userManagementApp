@@ -1,6 +1,7 @@
 @extends('layouts.app')
+
 @section('content')
-<div class="container">
+<div class="container mt-4">
     @if (session('status'))
         <div class="alert alert-success mt-3">
             {{ session('status') }}
@@ -45,13 +46,7 @@
             <input type="password" class="form-control" id="new_password_confirmation" name="new_password_confirmation" required>
         </div>
 
-        <button type="submit" class="btn btn-success">Actualizar Perfil</button>
+        <button type="submit" class="btn btn-primary">Cambiar Contraseña</button>
     </form>
-
-    @if (session('status'))
-        <div class="alert alert-success mt-3">
-            {{ session('status') }}
-        </div>
-    @endif
 </div>
 @endsection
