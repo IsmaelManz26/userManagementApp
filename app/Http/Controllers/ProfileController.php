@@ -34,15 +34,15 @@ class ProfileController
             'current_password' => 'nullable',
             'new_password' => 'nullable|min:8|confirmed',
         ]);
-    
+
         $user = Auth::user();
         $user->name = $request->name;
         $user->email = $request->email;
-        
+
         if ($request->filled('new_password')) {
             $user->password = Hash::make($request->new_password);
         }
-    
+
         $user->save();
         return back()->with('status', 'Profile updated successfully');
     }

@@ -28,7 +28,7 @@
             <i class="fas fa-table me-1"></i>
             Actions
         </div>
-        <div class="card-body">
+        <div class="card-body d-grid gap-4">
             @guest
                 <a href="{{ url('login') }}" class="btn btn-primary">Login</a>
                 <br>
